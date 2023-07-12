@@ -1,4 +1,3 @@
-# -Assignment-Management-Software-System
 # Assignment Management Software System
 
 This project is a system for managing student assignments and submissions. It allows teachers to assign assignments to student groups, track the status of assignments, evaluate submissions, and generate reports based on various criteria.
