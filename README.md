@@ -1,82 +1,60 @@
 # Assignment Management Software System
 
-This project is a system for managing student assignments and submissions. It allows teachers to assign assignments to student groups, track the status of assignments, evaluate submissions, and generate reports based on various criteria.
+This is a project developed in C language for managing student assignments and submissions. The system allows students to form groups, each containing 2 students, and the teacher can assign different assignments to different groups. The teacher can evaluate the assignments offline and conduct viva for each group. The system maintains two databases: one for student records and another for assignment records.
 
-## Features
+## Student Database
 
-1. Inserting Student Records:
-   - Allows the insertion of a student record into the student database.
-   - Automatically updates the assignment database with the appropriate changes/insertions.
+The student database contains the following fields for each student record:
+- Student ID
+- Name
+- Group Partner
+- Group ID
+- Assignment Name/ID
+- Deadline
+- Status of Assignment (Submitted/Not Submitted/Evaluated)
+- Offline Evaluation Marks
+- Viva Marks
 
-2. Inserting Assignment Records:
-   - Enables the insertion of an assignment record into the assignment record database.
-   - Supports assigning the same assignment to multiple student groups.
-   - Automatically updates the student database with the necessary changes/insertions.
+## Assignment Database
 
-3. Changing Assignment and Student Database Status:
-   - Updates the status of the assignment and student databases based on different events, such as submission or evaluation.
-   - Tracks the submission status of student groups and the evaluation status of assignments.
+The assignment database contains the following fields for each assignment record:
+- Assignment ID
+- Topic Name
+- Status (Declared/Due Date Over/Evaluated)
 
-4. Printing Details of Declared but Unevaluated Assignments:
-   - Generates a report listing the details of assignments that have been declared but not yet evaluated.
+Each assignment record can have a separate database inside, which contains the following fields for each record:
+- Student Group ID
+- Status (Declared/Submitted/Not Submitted/Evaluated)
+- Marks Given
 
-5. Printing Details of Student Groups with Overdue Assignments:
-   - Generates a report listing the details of student groups that have not submitted their assignments even after the due date has passed.
+## Operations
 
-6. Printing Details of Student Groups with Pending Evaluation:
-   - Generates a report listing the details of student groups whose assignments have been submitted but are yet to be evaluated.
-   - Explicitly mentions if a viva is pending for any group.
+The following operations are defined in the system:
 
-7. Printing Details of Student Groups for a Given Assignment ID:
-   - Generates a report listing the details of student groups who received the assignment with the given ID.
-   - The list is ordered in decreasing order of the marks received in the assignment.
+1. Insert a student record: This operation allows the insertion of a new student record into the student database. After insertion, appropriate changes/insertions are made in the assignment database as well.
 
-8. Printing Student Groups with Top Marks in Each Assignment:
-   - Generates a report listing the student groups that received the top marks in each assignment.
+2. Insert assignment record: This operation allows the insertion of a new assignment record into the assignment database. The insertion function can take a list of students and allocate the assignment to multiple student groups, resulting in insertions in the student database as well.
 
-9. Range Search:
-   - Allows searching and printing the details of assignments within a specified range of assignment IDs.
+3. Change status of assignment and student database: This operation allows changing the status of the assignment and student databases based on different events, such as a student group submitting the assignment or an assignment being evaluated for a specific student group. Once an assignment is evaluated for all student groups, the status of the assignment itself changes to "evaluated".
+
+4. Print details of declared but not evaluated assignments: This operation prints the details of assignments that have been declared but not yet evaluated.
+
+5. Print details of student groups who have not submitted assignments: This operation prints the details of student groups who have not submitted assignments even if the due date is over.
+
+6. Print details of student groups with pending evaluation: This operation prints the details of student groups for whom the assignment is yet to be evaluated, even though they have been submitted. If a viva is remaining to be taken, it is explicitly mentioned.
+
+7. Print details of student groups for a given assignment ID: This operation prints the details of student groups for a given assignment ID in decreasing order of the marks they have received in the assignment.
+
+8. Print student groups receiving top marks in each assignment: This operation prints the student groups receiving top marks in each assignment given.
+
+9. Range search: This operation allows searching and printing the details of assignments with assignment IDs between assignment-id-1 and assignment-id-2.
 
 ## Usage
 
-To use this system, follow these steps:
+To use this system, you can create a menu-driven program where students and the teacher can log in (password not mandatory) and perform all the above operations. The program should provide options for each operation and guide the user through the necessary steps to complete the desired task.
 
-1. Install the necessary dependencies and set up the required databases.
-2. Run the program or access the web interface.
-3. Perform the desired operations by selecting the appropriate options from the menu or interface.
-4. View the generated reports or perform additional operations as needed.
+Please note that creating a menu-driven program is not compulsory, but extra credits may be given for implementing it.
 
-## Technologies Used
+## Conclusion
 
-- Programming Language: [Specify the programming language used]
-- Database: [Specify the database management system used]
-- Frameworks/Libraries: [Specify any frameworks or libraries used, if applicable]
-
-## Getting Started
-
-To get started with this project, follow the instructions below:
-
-1. Clone the repository: `git clone [repository URL]`
-2. Install the dependencies: [Specify the command or instructions to install dependencies]
-3. Set up the database: [Specify the steps to set up the database]
-4. Configure the project: [Specify any configuration steps required]
-5. Run the program: [Specify the command or instructions to run the program]
-6. Access the web interface: [Specify the URL or instructions to access the web interface]
-
-## Contributing
-
-Contributions to this project are welcome. To contribute, please follow these guidelines:
-
-1. Fork the repository.
-2. Create a new branch.
-3. Make your changes and commit them.
-4. Push your changes to your forked repository.
-5. Submit a pull request detailing your changes.
-
-## License
-
-[Specify the license for this project, if applicable]
-
-## Contact
-
-For any inquiries or support, please contact [Specify contact information].
+The Assignment Management Software System is designed to simplify the process of managing student assignments and submissions. It provides a user-friendly interface for students and teachers to perform various operations related to assignments and evaluations.
