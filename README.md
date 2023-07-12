@@ -51,9 +51,7 @@ The following operations are defined in the system:
 
 ## Usage
 
-To use this system, you can create a menu-driven program where students and the teacher can log in (password not mandatory) and perform all the above operations. The program should provide options for each operation and guide the user through the necessary steps to complete the desired task.
-
-Please note that creating a menu-driven program is not compulsory, but extra credits may be given for implementing it.
+To use this system, you can create a menu-driven program where students and the teacher can log in and perform all the above operations. The program should provide options for each operation and guide the user through the necessary steps to complete the desired task.
 
 ## Conclusion
 
