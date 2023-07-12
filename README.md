@@ -1,5 +1,5 @@
 # Assignment Management Software System
-![Assignment Management Software System](images/Assignment Management Software System.jpg)
+![Assignment Management Software System](images/Assignment Management Software System.png)
 
 This is a project developed in C language for managing student assignments and submissions. The system allows students to form groups, each containing 2 students, and the teacher can assign different assignments to different groups. The teacher can evaluate the assignments offline and conduct viva for each group. The system maintains two databases: one for student records and another for assignment records.
 
